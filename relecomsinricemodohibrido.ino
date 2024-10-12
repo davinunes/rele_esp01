@@ -30,20 +30,7 @@ void handleRoot() {
   server.send(200, "text/html", html);
 }
 
-void handleSetup() {
-  String html = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Configuração WiFi e SinricPro</title></head><body>";
-  html += "<h1>Configuração WiFi e SinricPro</h1>";
-  html += "<form action='/save' method='POST'>";
-  html += "SSID: <input type='text' name='ssid'><br>";
-  html += "Password: <input type='text' name='password'><br><br>";
-  html += "<h3>Tokens SinricPro</h3>";
-  html += "APP_KEY: <input type='text' name='appKey'><br>";
-  html += "APP_SECRET: <input type='text' name='appSecret'><br>";
-  html += "Switch ID: <input type='text' name='switchId'><br>";
-  html += "<input type='submit' value='Salvar'>";
-  html += "</form></body></html>";
-  server.send(200, "text/html", html);
-}
+<!DOCTYPE html><html><head><meta charset='UTF-8'>
 
 void handleSave() {
   ssid = server.arg("ssid");
